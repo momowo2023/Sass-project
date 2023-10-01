@@ -1,23 +1,7 @@
 @import "index.scss";
 
-@mixin header_list {
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 30px;
-    color: inherit;
-
-    &:hover {
-        background-color: rgb(115, 115, 115);
-        color: white;
-        padding: 5px;
-        border-radius: 5%;
-    }
-}
-
-
 .nav_section{
-    display: flex;
-    justify-content: space-between;    
+    @include nav_display;    
     
     .logo{
         img{
@@ -25,19 +9,20 @@
             height: auto;
             
             &:hover{
-                scale: 1.1;
-            }
-            
+                transform:scale(1.1);
+            }  
         }
     }
+
     .nav{
         ul.nav_list{
             list-style: none;
             margin-right: 90px;
-        }
+            @include nav_display;
 
-        li{
-            @include header_list
-        }      
+            li{
+                @include _list;
+            }      
+        }
     }
 }

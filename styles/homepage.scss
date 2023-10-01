@@ -8,10 +8,6 @@
         color: rgb(109, 64, 151);
     }
 }
-@mixin section_3_container_display{
-    display: flex;
-    justify-content: space-between;
-}
 
 @mixin section_3_container_note{
     line-height: 1.5;
@@ -19,6 +15,18 @@
     font-size: 28px;
     font-weight: bold;
 }
+
+@mixin home_container_display{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+  }
+
+
+$section_4_item1_font_size: 20px; 
+$section_4_item2_font_size: 18px; 
+$section_4_item3_title_font_size: 15px; 
+$section_4_item3_para_font_size: 14px;
 
 .section_1_container{
     display: flex;
@@ -53,11 +61,11 @@
     margin-bottom: 30px;
 
     .section_3_container_context{
-        @include section_3_container_display;
+        @include home_container_display;
     
         .section_3_container_note{
             width: 300px;
-            @include section_3_container_display;
+            @include home_container_display;
 
             p{
                 @include section_3_container_note;
@@ -65,3 +73,52 @@
         }
     }
 }
+
+.section_4_container{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+    margin-right: 120px;
+
+    .section_4_container_context{
+        @include home_container_display;
+        height: 300px;
+            
+        .section_4_container_context_item1{
+            margin-top: 25px;
+            font-size: $section_4_item1_font_size;
+        }
+
+        .section_4_container_context_item2{
+            margin-top: -80px;
+            @include home_container_display;
+            justify-content: space-evenly;
+            font-size: $section_4_item2_font_size;
+            padding: 110px;
+        }
+
+        .section_4_container_context_item3{
+            margin-top: 100px;
+            @include home_container_display;
+            justify-content: space-around;
+            width: 190px;
+            height: 110px;
+        }  
+
+        .section_4_container_context_item3_note{
+            margin-top: 20px;
+            @include home_container_display;
+
+            .section_4_container_context_item3_note_title{
+                font-size:$section_4_item3_title_font_size;
+                color: rgb(16, 15, 15);
+            }
+
+            .section_4_container_context_item3_note_para{
+                font-size:$section_4_item3_para_font_size;
+                color: rgb(186, 178, 178);
+                line-height: 1.5;
+            }
+        }
+    }
+}  

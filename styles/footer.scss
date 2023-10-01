@@ -1,0 +1,39 @@
+@import "index.scss";
+
+
+.footer_section{
+    margin-right: 120px;
+    @include nav_display;
+    
+    .nav_section{
+        margin-top: 80px; 
+    
+        .logo{
+            img{
+                max-width: 100%;
+                height: auto;
+            
+                &:hover{
+                    transform:scale(1.1);
+                }  
+            }
+        }
+
+        .nav{
+            ul.nav_list{
+                list-style: none;
+                margin-right: 90px;
+                @include nav_display;
+
+                li{
+                    @include _list;
+                }      
+            }
+        }
+        
+       .social{
+            @include footer_display;
+            width: 800px;
+        }   
+    }
+}

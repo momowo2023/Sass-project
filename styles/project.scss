@@ -1,0 +1,70 @@
+@import "index.scss";
+@import"header.scss";
+@import"footer.scss";
+
+
+
+@mixin pro_main_font{
+    color: black;
+    line-height: 1.5;  
+}
+
+@mixin pro_main_display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pro_section_1_container{
+    @include pro_main_display;
+    margin-right: 120px; 
+    
+    .pro_section_1_container_context_h{
+        @include pro_main_font;
+        font-size: x-large;
+    }
+    .pro_section_1_container_context_p{
+        @include pro_main_font;
+        width: 580px;
+        height: 200px;
+        font-size: 14px;
+    }
+    .pro_section_1_container_context_right_container{
+        @include pro_main_font;
+        font-size: smaller;
+        width: 300px;
+        height: 350px;
+        margin-top: 10px;
+
+        .pro_section_1_container_context_right_container_card{
+            @include pro_main_display;
+        
+            .gray{
+                color: rgb(159, 153, 153);
+            }
+        }
+    }
+}
+
+.pro_section_2{
+    height: 660px;
+    width: 1110px;
+}
+
+.pro_section_3{
+    width: auto;
+    margin-right: 80px;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    @include pro_main_font;
+}
+
+.pro_section_4{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+    margin-right: 90px;
+}
+
+.pro_section_4_container{
+    @include pro_main_display;
+}
