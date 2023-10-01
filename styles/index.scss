@@ -9,6 +9,24 @@ body {
       color: black;
     }
   }
-  
 
+ @mixin list {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 30px;
+  color: inherit;
+
+  &:hover {
+    background-color: rgb(115, 115, 115);
+    color: white;
+    padding: 5px;
+    border-radius: 5%;
+  }
+}
+
+@mixin nav_display{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 
