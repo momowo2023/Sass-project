@@ -1,6 +1,8 @@
 
 .nav_section{
-    @include nav_display;    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
     
     .logo{
         img{
@@ -17,10 +19,15 @@
         ul.nav_list{
             list-style: none;
             margin-right: 90px;
-            @include nav_display;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
 
             li{
-                @include _list;
+                font-size: 1.2rem;
+                text-decoration: none;
+                padding: 30px;
+                color: inherit;
             }      
         }
     }
