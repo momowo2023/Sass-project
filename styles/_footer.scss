@@ -1,7 +1,10 @@
 
 .footer_section{
-    margin-right: 120px;
-    @include nav_display;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+    max-width: 1000px;
+    width: 100%;
     
     .nav_section{
         margin-top: 80px; 
@@ -17,21 +20,38 @@
             }
         }
 
-        .nav{
-            ul.nav_list{
-                list-style: none;
-                margin-right: 90px;
-                @include nav_display;
-
-                li{
-                    @include _list;
-                }      
-            }
+        .footer_list_display{           
+            list-style: none;
+            margin-right: 90px;
+            margin-top: -30px;
+            display: flex;
+            justify-content: space-between;
+                
+            a{
+                font-size: 1.2rem;
+                text-decoration: none;
+                padding: 30px;
+                color: inherit;
+            }      
+            
+            &:hover{
+                cursor: pointer;
+            } 
+        
+        
         }
+    
         
        .social{
-            @include footer_display;
-            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100px;
+            margin-right: -100px;
+
+            &:hover{
+                cursor: pointer;
+            } 
         }   
     }
 }

@@ -1,7 +1,7 @@
 
 
 body {
-    margin: 70px 150px 150px 70px;
+    margin: 50px 100px 50px 100px;
     max-width: 1200px;
     width: 100%;
     height: auto;
@@ -10,9 +10,9 @@ body {
       family: 'Mulish', sans-serif;
       color: black;
     }
-  }
+}
 
- @mixin list {
+@mixin list {
   font-size: 1.2rem;
   text-decoration: none;
   padding: 30px;
@@ -43,17 +43,26 @@ body {
     }
 }
 
-@mixin section_3_container_note{
+@mixin section_3_container_p{
     line-height: 1.5;
     text-shadow: 0.03em 0.03em gray;
     font-size: 28px;
+    color: black;
     font-weight: bold;
+}
+
+@mixin section_3_container_note{
+    line-height: 1.5;
+    font-size: 20px;
+    color: gray;
 }
 
 @mixin home_container_display{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row; 
+    max-width: 1200px;
+    width: 100%;
   }
 
 
@@ -67,9 +76,9 @@ $section_4_item3_para_font_size: 14px;
     justify-content: space-between;
     margin-right: 120px;
 
-    .section_1_container_context{
         .section_1_container_context_p{
             color: rgb(109, 64, 151);
+            font-weight: bold;
         }
         .section_1_container_context_h{
             @include main-title;
@@ -81,12 +90,14 @@ $section_4_item3_para_font_size: 14px;
             font-size: smaller;
             font-style: italic;
         }
-    }
+    
 }
 
 .section_2{
     height: 1960px;
     width: 1110px;
+    display: flex;
+    justify-content: center;
 }
 
 .section_3_container{
@@ -95,52 +106,60 @@ $section_4_item3_para_font_size: 14px;
     margin-bottom: 30px;
 
     .section_3_container_context{
+        
         @include home_container_display;
-    
+        p{
+            @include section_3_container_p;
+        }
+
         .section_3_container_note{
             width: 300px;
             @include home_container_display;
 
             p{
                 @include section_3_container_note;
+                text-shadow: none;
             }
         }
     }
 }
 
 .section_4_container{
-    margin-top: 60px;
-    margin-bottom: 30px;
-    margin-bottom: 30px;
-    margin-right: 120px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: auto;
+    height: 100%;
+
+        hr{
+            width: 110%;
+        }
 
     .section_4_container_context{
         @include home_container_display;
         height: 300px;
-            
+        
         .section_4_container_context_item1{
-            margin-top: 25px;
             font-size: $section_4_item1_font_size;
         }
 
         .section_4_container_context_item2{
-            margin-top: -80px;
-            @include home_container_display;
+            
+            display: flex;
             justify-content: space-evenly;
+            flex-direction: column;
             font-size: $section_4_item2_font_size;
-            padding: 110px;
+            
         }
 
         .section_4_container_context_item3{
-            margin-top: 100px;
-            @include home_container_display;
-            justify-content: space-around;
-            width: 190px;
-            height: 110px;
+            display: block;
+            
         }  
 
         .section_4_container_context_item3_note{
-            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
             @include home_container_display;
 
             .section_4_container_context_item3_note_title{
