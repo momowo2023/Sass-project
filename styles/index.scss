@@ -1,37 +1,9 @@
 @import"homepage.scss";
 @import"project.scss";
 @import"contact.scss";
+@import"header";
+@import"footer";
 
-body {
-    margin: 70px 150px 150px 70px;
-    max-width: 1200px;
-    width: 100%;
-    height: auto;
 
-    font: {
-      family: 'Mulish', sans-serif;
-      color: black;
-    }
-  }
-
- @mixin list {
-  font-size: 1.2rem;
-  text-decoration: none;
-  padding: 30px;
-  color: inherit;
-
-  &:hover {
-    background-color: rgb(115, 115, 115);
-    color: white;
-    padding: 5px;
-    border-radius: 5%;
-  }
-}
-
-@mixin display{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
 
 
