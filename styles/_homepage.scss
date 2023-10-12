@@ -59,7 +59,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row; 
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
   }
 
@@ -70,10 +70,10 @@ $section_4_item3_title_font_size: 15px;
 $section_4_item3_para_font_size: 14px;
 
 .section_1_container{
-    
     display: flex;
     justify-content: space-between;
     margin-right: 120px;
+    margin-left: 50px;
 
         .section_1_container_context_p{
             color: rgb(109, 64, 151);
@@ -100,9 +100,14 @@ $section_4_item3_para_font_size: 14px;
 }
 
 .section_3_container{
-    margin-right: 120px;
+    margin-left: 50px;
     margin-top: 40px;
     margin-bottom: 30px;
+    max-width: 1200px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    
 
     .section_3_container_context{
         
@@ -124,53 +129,43 @@ $section_4_item3_para_font_size: 14px;
 }
 
 .section_4_container{
-    max-width: 1000px;
-    width: 100%;
-    max-height: auto;
+    max-width: 1200px;
+    width: 90%;
     height: 100%;
+    margin-left: 50px;
 
-        hr{
-            width: 110%;
-        }
-
-    .section_4_container_context{
-        @include home_container_display;
-        height: 300px;
+    .section_4_container_context{   
+        display: flex;
+        justify-content: space-between;
         
         .section_4_container_context_item1{
             font-size: $section_4_item1_font_size;
+            width: 100px;
         }
 
-        .section_4_container_context_item2{
-            
+        .section_4_container_context_item2{           
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             flex-direction: column;
-            font-size: $section_4_item2_font_size;
-            
+            font-size: $section_4_item2_font_size;  
         }
 
         .section_4_container_context_item3{
-            display: block;
-            
-        }  
-
-        .section_4_container_context_item3_note{
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-            @include home_container_display;
-
-            .section_4_container_context_item3_note_title{
-                font-size:$section_4_item3_title_font_size;
-                color: rgb(16, 15, 15);
+           display: flex;
+           justify-content: flex-start;
+           flex-direction: column;   
+           width: 160px;      
+        
+            .black-3{
+                $section_4_item3_title_font_size: 15px;                
             }
-
-            .section_4_container_context_item3_note_para{
-                font-size:$section_4_item3_para_font_size;
-                color: rgb(186, 178, 178);
+            .gray-3{
+                $section_4_item3_para_font_size: 14px;
+                color: gray;
                 line-height: 1.5;
             }
         }
-    }
-}  
+        
+
+    }  
+}

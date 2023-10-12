@@ -17,6 +17,7 @@
     .con_section_1_container_context_h{
         @include con_main_font;
         font-size: x-large;
+        font-weight: bolder;
     }
     .con_section_1_container_context_p{
         @include con_main_font;
