@@ -1,3 +1,9 @@
+body {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+}
 
 @mixin pro_main_font{
     color: black;
@@ -11,7 +17,10 @@
 
 .pro_section_1_container{
     @include pro_main_display;
-    margin-right: 120px; 
+    max-width: 1200px;
+    width: 95%;
+    height: auto;
+    
     
     .pro_section_1_container_context_h{
         @include pro_main_font;
@@ -26,28 +35,35 @@
     .pro_section_1_container_context_right_container{
         @include pro_main_font;
         font-size: smaller;
-        width: 300px;
+        width: 280px;
         height: 350px;
         margin-top: 10px;
 
         .pro_section_1_container_context_right_container_card{
             @include pro_main_display;
-        
+            justify-content: flex-start;
+            
             .gray{
                 color: rgb(159, 153, 153);
+                width: 110px;        
             }
         }
     }
 }
 
 .pro_section_2{
-    height: 660px;
-    width: 1110px;
+    margin-top: 50px;
+   
+    img{
+        width: 1200px;
+        width: 95%;
+    }
 }
 
 .pro_section_3{
     width: auto;
-    margin-right: 80px;
+    max-width: 1200px;
+    width: 95%;
     margin-top: 40px;
     margin-bottom: 45px;
     @include pro_main_font;
@@ -55,11 +71,18 @@
 
 .pro_section_4{
     margin-top: 60px;
-    margin-bottom: 30px;
-    margin-bottom: 30px;
-    margin-right: 90px;
-}
+    margin-bottom: 30px; 
+    max-width: 1200px;
+    width: 95%;
 
-.pro_section_4_container{
-    @include pro_main_display;
-}
+    .p_section_4_container{
+        display: flex;
+        justify-content: space-around;
+     
+            
+        img{
+            width: 350px;
+            height: 400px;
+        }
+    }
+ }
