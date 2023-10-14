@@ -36,7 +36,8 @@ body {
         @include pro_main_font;
         font-size: smaller;
         width: 280px;
-        height: 350px;
+        min-height: 500px;
+        
         margin-top: 10px;
 
         .pro_section_1_container_context_right_container_card{
