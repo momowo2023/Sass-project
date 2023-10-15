@@ -319,9 +319,10 @@ body {
   text-decoration: none;
   padding: 30px;
   color: inherit;
-}
-.nav_section .nav_list:hover {
   cursor: pointer;
+}
+.nav_section .nav_list a:hover, .nav_section .nav_list a:active {
+  color: gray;
 }
 
 .footer_section {
@@ -342,7 +343,6 @@ body {
   transform: scale(1.1);
 }
 .footer_section .nav_section .footer_list_display {
-  list-style: none;
   margin-right: 90px;
   margin-top: -30px;
   display: flex;
@@ -353,9 +353,10 @@ body {
   text-decoration: none;
   padding: 30px;
   color: inherit;
-}
-.footer_section .nav_section .footer_list_display:hover {
   cursor: pointer;
+}
+.footer_section .nav_section .footer_list_display a:hover, .footer_section .nav_section .footer_list_display a:active {
+  color: gray;
 }
 .footer_section .nav_section .social {
   display: flex;
@@ -364,6 +365,10 @@ body {
   width: 100px;
   margin-right: -100px;
 }
-.footer_section .nav_section .social:hover {
+.footer_section .nav_section .social a {
   cursor: pointer;
+  color: inherit;
+}
+.footer_section .nav_section .social a:hover, .footer_section .nav_section .social a:active {
+  color: gray;
 }/*# sourceMappingURL=index.css.map */

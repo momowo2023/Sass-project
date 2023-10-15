@@ -20,8 +20,7 @@
             }
         }
 
-        .footer_list_display{           
-            list-style: none;
+        .footer_list_display{                      
             margin-right: 90px;
             margin-top: -30px;
             display: flex;
@@ -32,13 +31,14 @@
                 text-decoration: none;
                 padding: 30px;
                 color: inherit;
-            }      
-            
-            &:hover{
                 cursor: pointer;
-            } 
-        
-        
+                
+                &:hover,
+                &:active{
+                    color: gray;                                    
+                }               
+            }      
+ 
         }
     
         
@@ -49,9 +49,16 @@
             width: 100px;
             margin-right: -100px;
 
-            &:hover{
+            a{              
                 cursor: pointer;
-            } 
+                color: inherit;
+            
+                &:hover,
+                &:active{
+                    color: gray;                  
+                }
+                
+            }          
         }   
     }
 }
