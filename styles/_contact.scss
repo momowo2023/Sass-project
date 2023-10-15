@@ -17,8 +17,15 @@ body {
 }
 
 .con_section_1_container{
-    @include con_main_display;
-    margin-right: 120px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 95%;
+
+    .con_section_1_container_context_left{
+        max-width: 400px;
+    }
+
 
     .con_section_1_container_context_h{
         @include con_main_font;
@@ -34,8 +41,9 @@ body {
     form{
         color: grey;
         font-size: 14px;
-        width: 300px;
+        width: 400px;
         margin-top: 20px;
+        margin-bottom: 30px;       
         display: flex;
         justify-content: space-around;
         flex-direction: column;
@@ -64,4 +72,9 @@ body {
             }
         }
     }
+}
+
+.con_section_2{
+    display: flex;
+    justify-content: center;
 }
